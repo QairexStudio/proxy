@@ -15,3 +15,4 @@ for i in range(len(ip)):
 print("-------------------GET-----------------ALL---------------------DATA----------------")
 for u in range(7):
     print(test.proxy.get(u))
+test.proxy.check(ip[0], port[0])
