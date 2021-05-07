@@ -11,7 +11,13 @@ proxy | Proxy class
 get | get data from sslproxies.com
 check | proxy tested
 
-put the library in the directory where your file is located
+### Packages used
+
+* fake-useragent
+* beautifulsoup4
+* requests
+
+Don't forget to put the library in the directory where your file is located.
 
 #### include it in your project or program
 
@@ -19,7 +25,7 @@ put the library in the directory where your file is located
 import proxy as test
 ```
 
-#### Let's pull the data
+### Let's pull the data
 ```py
 ip, port = [], []
 for i in test.proxy.get(0):
@@ -33,8 +39,8 @@ Result:
 ```py
 219.92.3.149:8080
 ```
---------
-#### Check the Proxy connection
+
+### Check the Proxy connection
 
 ```py
 ip, port = [], []
@@ -49,8 +55,8 @@ Result:
 ```py
 Working...169.57.1.84:8123
 ```
-----------
-#### get all the information
+
+### get all the information
 
 ```py
 att = []
@@ -71,9 +77,7 @@ Result:
 ['yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes']
 ```
 
--------
-
-#### Index numbers
+### Index numbers
 
 ```py
 test.proxy.get("test")
@@ -85,9 +89,7 @@ Result:
 proxy must be integer! {'0': 'IP address', '1': 'Port', '2': 'Country_code', '3': 'Country', '4': 'Anonymity', '5': 'Google', '6': 'Https', '7': 'Last_checked'}
 ```
 
----------
-
-#### you can also separate
+### you can also separate
 
 ```py
 ip, port = [], []
