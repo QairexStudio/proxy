@@ -25,13 +25,17 @@ class proxy:
         try:
             try:
                 try:
-                    req = requests.get("http://httpbin.org/ip", proxies={"http": "http://" + combine, "https": "https://" + combine}, timeout=6)
-                    if req.ok:
-                        sys.stdout.write("\rWorking..." + combine + "| Code: " + str(req))
-                        return True
-                    else:
-                        sys.stdout.write("\rNot working..." + combine + "| Code: " + str(req))
-                        return False
+                    try:
+                        req = requests.get("http://httpbin.org/ip", proxies={"http": "http://" + combine, "https": "https://" + combine}, timeout=6)
+                        if req.ok:
+                            sys.stdout.write("\rWorking..." + combine + "| Code: " + str(req))
+                            return True
+                        else:
+                            sys.stdout.write("\rNot working..." + combine + "| Code: " + str(req))
+                            return False
+                    except requests.exceptions.ChunkedEncodingError:
+                            sys.stdout.write("\rProxy connection closed!" + combine)
+                            return False
                 except requests.exceptions.ProxyError:
                         sys.stdout.write("\rProxy ERROR!" + combine)
                         return False
