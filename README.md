@@ -107,6 +107,15 @@ Result
 Connection established
 ```
 
+### Errors
+
+* Not working: proxy does not work
+* Working: proxy is working
+* Proxy cannot connect: the proxy server is too slow or faulty server i.e. the server cannot be reached
+* Proxy Connection Timeout: proxy server too slow or faulty server
+* Proxy ERROR: bad proxy not well configured or proxy with problem
+
+
 --------
 
 ## Knowledge
