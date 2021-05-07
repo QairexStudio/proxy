@@ -29,10 +29,10 @@ class proxy:
                         try:
                             req = requests.get("http://httpbin.org/ip", proxies={"http": "http://" + combine, "https": "https://" + combine}, timeout=6)
                             if req.ok:
-                                sys.stdout.write("\rWorking..." + combine + " | Code: " + str(req))
+                                sys.stdout.write("\rWorking..." + combine + " " + str(req))
                                 return True
                             else:
-                                sys.stdout.write("\rNot working..." + combine + " | Code: " + str(req))
+                                sys.stdout.write("\rNot working..." + combine + " " + str(req))
                                 return False
                         except:
                             sys.stdout.write("\rUnknown proxy error has occurred" + combine)
