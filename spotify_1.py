@@ -20,6 +20,7 @@ import os
 from random_words import RandomWords
 import random
 from bs4 import BeautifulSoup
+import proxy as test
 #from pydub.silence import split_on_silence
 #from nltk.tokenize import word_tokenize
 #from imageai.Classification.Custom import ClassificationModelTrainer
@@ -34,6 +35,13 @@ def execute():
         profile.set_preference("network.proxy.socks_port", 9050)
         profile.set_preference("network.proxy.socks_remote_dns", False)
     #proxy()
+    ip, port = [], []
+    for i in test.proxy.get(0):
+        ip.append(i)
+    for t in test.proxy.get(1):
+        port.append(t)
+    for l in range(len(ip)):
+        test.proxy.check(ip[l], port[l])
     profile = webdriver.FirefoxProfile()
     profile.set_preference("general.useragent.override", ua.chrome)
     profile.set_preference("browser.cache.disk.enable", False)
