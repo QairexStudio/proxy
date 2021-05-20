@@ -122,4 +122,4 @@ Connection established
 
 This program was originally created as a utility of a program and has been published for this purpose. The use of the program depends on the person. besides, the program was not seriously created. that is, it was created for entertainment purposes and donated to software developers. It is completely free to develop the program.
 
-If you are a developer, you can contact us: QairexStudio@gmail.com
+If you are a developer, you can contact us: QairexStudio@gmail.com or [join](https://discord.gg/DXaEam8Bmb) us
