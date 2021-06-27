@@ -51,7 +51,7 @@ class proxy:
                             os.sys.stdout.flush()
                             return False
                 except requests.exceptions.ProxyError:
-                     os.sys.stdout.flush()
+                        os.sys.stdout.flush()
                         sys.stdout.write("\rProxy ERROR!" + combine)
                         os.sys.stdout.flush()
                         return False
