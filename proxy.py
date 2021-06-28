@@ -40,9 +40,9 @@ class proxy:
                                 sys.stdout.write("\rNot working..." + combine + " " + str(req))
                                 os.sys.stdout.flush()
                                 return False
-                        except:
+                        except requests.exceptions.ConnectTimeout:
                             os.sys.stdout.flush()
-                            sys.stdout.write("\rUnknown proxy error has occurred" + combine)
+                            sys.stdout.write("\rProxy Connection Timeout!" + combine)
                             os.sys.stdout.flush()
                             return False
                     except requests.exceptions.ChunkedEncodingError:
@@ -60,8 +60,8 @@ class proxy:
                 sys.stdout.write("\rProxy cannot connect!" + combine)
                 os.sys.stdout.flush()
                 return False
-        except requests.exceptions.ConnectTimeout:
+        except:
             os.sys.stdout.flush()
-            sys.stdout.write("\rProxy Connection Timeout!" + combine)
+            sys.stdout.write("\rUnknown proxy error has occurred" + combine)
             os.sys.stdout.flush()
             return False
